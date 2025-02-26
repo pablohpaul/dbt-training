@@ -5,9 +5,12 @@ SELECT o.orderid,
         o.ordersellingprice - o.ordercostprice as orderprofit,
         o.ordersellingprice,
         o.ordercostprice,
-        c.customername, 
+        c.customerid,
+        c.customername,
+        c.segment,  
         c.country,
         p.category, 
+        p.productid,
         p.productname, 
         p.subcategory
 FROM {{ ref('raw_order') }} as o
