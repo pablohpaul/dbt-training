@@ -4,4 +4,4 @@
     )
 }}
 
-SELECT * FROM RAW.PUBLIC.ORDERS
+SELECT * FROM {{ source('public', 'orders') }}
